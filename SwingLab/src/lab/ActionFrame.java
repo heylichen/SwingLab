@@ -16,6 +16,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.KeyStroke;
 
+//lichen test
 /**
  * A frame with a panel that demonstrates color change actions.
  */
