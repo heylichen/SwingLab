@@ -1,4 +1,4 @@
-package heylichen.concurrency.test.target;
+package concurrency.comp.bq;
 
 import java.util.concurrent.Semaphore;
 
