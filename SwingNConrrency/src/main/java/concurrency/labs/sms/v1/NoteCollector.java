@@ -1,4 +1,4 @@
-package concurrency.sms.send;
+package concurrency.labs.sms.v1;
 
 import java.util.LinkedList;
 import java.util.List;

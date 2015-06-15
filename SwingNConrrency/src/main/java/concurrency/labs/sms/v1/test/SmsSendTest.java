@@ -1,12 +1,12 @@
-package concurrency.sms.send.test;
+package concurrency.labs.sms.v1.test;
 
 import java.util.LinkedList;
 import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-import concurrency.sms.send.NoteCollector;
-import concurrency.sms.send.NoteSender;
+import concurrency.labs.sms.v1.NoteCollector;
+import concurrency.labs.sms.v1.NoteSender;
 
 public class SmsSendTest {
 	ExecutorService pool;
