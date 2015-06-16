@@ -5,6 +5,8 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import concurrency.labs.sms.common.model.NoteTask;
+
 /**
  * @author lrh
  *
@@ -74,6 +76,7 @@ public class NoteSender implements Runnable {
 
 				logger.info("after send, data size:{}", data.size());
 			}
+			long start = System.currentTimeMillis();
 			if (!Thread.interrupted()) {
 				try {
 					Thread.sleep(1000);
@@ -82,6 +85,9 @@ public class NoteSender implements Runnable {
 					e.printStackTrace();
 				}
 			}
+
+			long duration = System.currentTimeMillis() - start;
+			logger.info("sleep duration:{}", duration);
 
 		}
 	}

@@ -1,7 +1,8 @@
-package concurrency.labs.sms.v1;
+package concurrency.labs.sms.v2;
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.concurrent.BlockingQueue;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,16 +15,15 @@ import concurrency.labs.sms.common.model.NoteTask;
  */
 public class NoteCollector implements Runnable {
 	Logger logger = LoggerFactory.getLogger(NoteCollector.class);
-	List data;
-	List temp;
-	int total = 50;
+
+	BlockingQueue<NoteTask> taskQueue;
 
 	/**
 	 * 
 	 */
-	public NoteCollector(List data) {
+	public NoteCollector(BlockingQueue<NoteTask> taskQueue) {
 		// TODO Auto-generated constructor stub
-		this.data = data;
+		this.taskQueue = taskQueue;
 	}
 
 	/*
@@ -34,39 +34,33 @@ public class NoteCollector implements Runnable {
 	public void run() {
 		// TODO Auto-generated method stub
 		while (!Thread.interrupted()) {
-			getData();
-			synchronized (data) {
-				if (!temp.isEmpty()) {
-					if (!data.isEmpty()) {
-						data.add(temp);
-					} else {
-						data.add(temp);
-						data.notifyAll();
-					}
-				}
+			List<NoteTask> temp = getData();
+			for (NoteTask task : temp) {
 				try {
-					logger.info("before wait, data size:{}", data.size());
-					long start = System.currentTimeMillis();
-					data.wait(1000);
-					long duration = System.currentTimeMillis() - start;
-					logger.info("after wait, data size:{}, wait duration:{}",
-							data.size(), duration);
-				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
+					taskQueue.put(task);
+				} catch (InterruptedException ex) {
+					logger.info("Interrupted Task Id: {}", task.getId());
 				}
 			}
+			logger.info("queue size after put:{}", taskQueue.size());
+			try {
+				Thread.currentThread().sleep(200L);
+			} catch (InterruptedException ex) {
+				logger.info("Interrupted while sleeping");
+			}
+
 		}
 	}
 
-	private void getData() {
+	private List<NoteTask> getData() {
 		// temp = db.getNoteTask(total, 9, m);// 先取优先级高的数据，在没有优先级高的情况下再取优先级低的
-		temp = new LinkedList();
-		for (int i = 0; i < 9; i++) {
+		List<NoteTask> temp = new LinkedList();
+		for (int i = 0; i < 20; i++) {
 			NoteTask task = new NoteTask();
 			task.setId(getRand());
 			temp.add(task);
 		}
+		return temp;
 	}
 
 	public long getRand() {

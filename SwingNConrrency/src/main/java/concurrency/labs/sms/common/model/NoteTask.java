@@ -1,4 +1,4 @@
-package concurrency.labs.sms.v1;
+package concurrency.labs.sms.common.model;
 
 import java.util.Date;
 

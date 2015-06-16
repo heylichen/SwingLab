@@ -1,13 +1,16 @@
-package concurrency.labs.sms.v1.test;
+package concurrency.labs.sms.v1;
 
 import java.util.LinkedList;
 import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-import concurrency.labs.sms.v1.NoteCollector;
-import concurrency.labs.sms.v1.NoteSender;
-
+/**
+ * Code peeked from production project
+ * NoteTask list size will grow over time
+ * @author heylichen
+ *
+ */
 public class SmsSendTest {
 	ExecutorService pool;
 	int pool_size = 4;
