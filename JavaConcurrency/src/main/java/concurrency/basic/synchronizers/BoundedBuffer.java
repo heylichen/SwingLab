@@ -1,10 +1,17 @@
-package concurrency.comp.bq;
+package concurrency.basic.synchronizers;
 
 import java.util.concurrent.Semaphore;
 
 import net.jcip.annotations.GuardedBy;
 import net.jcip.annotations.ThreadSafe;
 
+/**
+ * A Blocking Bounded Buffer
+ * using Semaphore
+ * @author heylichen
+ *
+ * @param <E>
+ */
 @ThreadSafe
 public class BoundedBuffer<E> {
 	private final Semaphore availableItems, availableSpaces;

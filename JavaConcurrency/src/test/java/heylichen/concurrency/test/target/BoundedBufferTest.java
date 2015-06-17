@@ -5,7 +5,7 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-import concurrency.comp.bq.BoundedBuffer;
+import concurrency.basic.synchronizers.BoundedBuffer;
 
 public class BoundedBufferTest {
 	private final long LOCKUP_DETECT_TIMEOUT = 3 * 1000;
