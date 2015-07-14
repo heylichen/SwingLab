@@ -1,0 +1,13 @@
+2015-07-14 21:56:51,260 INFO [pool-1-thread-1] [ButtonFrame.java:71]-> compute for 2 secs
+2015-07-14 21:57:30,438 INFO [pool-1-thread-1] [ButtonFrame.java:71]-> compute for 2 secs
+2015-07-14 22:01:37,367 INFO [pool-1-thread-1] [ButtonFrame.java:71]-> compute for 2 secs
+2015-07-14 22:01:37,367 INFO [pool-1-thread-1] [BackgroundTask.java:29]-> done hook
+2015-07-14 22:02:46,648 INFO [pool-1-thread-1] [ButtonFrame.java:79]-> compute for 2 secs
+2015-07-14 22:02:46,648 INFO [pool-1-thread-1] [BackgroundTask.java:29]-> done hook
+2015-07-14 22:03:27,710 INFO [AWT-EventQueue-0] [BackgroundTask.java:29]-> done hook
+2015-07-14 22:03:57,161 INFO [pool-1-thread-1] [ButtonFrame.java:82]-> compute for 2 secs
+2015-07-14 22:03:57,161 INFO [pool-1-thread-1] [BackgroundTask.java:29]-> done hook
+2015-07-14 22:06:22,925 INFO [pool-1-thread-1] [ButtonFrame.java:82]-> compute for 2 secs
+2015-07-14 22:06:22,925 INFO [pool-1-thread-1] [BackgroundTask.java:29]-> done hook
+2015-07-14 22:06:22,937 INFO [AWT-EventQueue-0] [ButtonFrame.java:90]-> onCompletion called
+2015-07-14 22:06:22,938 INFO [AWT-EventQueue-0] [ButtonFrame.java:91]-> status, cancelled:false, exception:null 
