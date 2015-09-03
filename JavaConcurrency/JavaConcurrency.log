@@ -11,3 +11,17 @@
 2015-07-14 22:06:22,925 INFO [pool-1-thread-1] [BackgroundTask.java:29]-> done hook
 2015-07-14 22:06:22,937 INFO [AWT-EventQueue-0] [ButtonFrame.java:90]-> onCompletion called
 2015-07-14 22:06:22,938 INFO [AWT-EventQueue-0] [ButtonFrame.java:91]-> status, cancelled:false, exception:null 
+2015-07-25 21:05:44,360 INFO [pool-1-thread-1] [ButtonFrame.java:82]-> compute for 2 secs
+2015-07-25 21:05:44,467 INFO [pool-1-thread-1] [BackgroundTask.java:29]-> done hook
+2015-07-25 21:05:44,471 INFO [AWT-EventQueue-0] [ButtonFrame.java:90]-> onCompletion called
+2015-07-25 21:05:44,472 INFO [AWT-EventQueue-0] [ButtonFrame.java:91]-> status, cancelled:false, exception:null 
+2015-07-25 21:05:50,606 INFO [AWT-EventQueue-0] [BackgroundTask.java:29]-> done hook
+2015-07-25 21:05:50,607 INFO [AWT-EventQueue-0] [ButtonFrame.java:90]-> onCompletion called
+2015-07-25 21:05:50,607 INFO [AWT-EventQueue-0] [ButtonFrame.java:91]-> status, cancelled:true, exception:null 
+2015-07-25 21:28:49,557 INFO [pool-1-thread-1] [ButtonFrame.java:82]-> compute for 2 secs
+2015-07-25 21:28:49,567 INFO [pool-1-thread-1] [BackgroundTask.java:29]-> done hook
+2015-07-25 21:28:49,570 INFO [AWT-EventQueue-0] [ButtonFrame.java:90]-> onCompletion called
+2015-07-25 21:28:49,571 INFO [AWT-EventQueue-0] [ButtonFrame.java:91]-> status, cancelled:false, exception:null 
+2015-07-25 21:29:02,652 INFO [AWT-EventQueue-0] [BackgroundTask.java:29]-> done hook
+2015-07-25 21:29:02,656 INFO [AWT-EventQueue-0] [ButtonFrame.java:90]-> onCompletion called
+2015-07-25 21:29:02,656 INFO [AWT-EventQueue-0] [ButtonFrame.java:91]-> status, cancelled:true, exception:null 
