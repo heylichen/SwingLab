@@ -12,16 +12,18 @@ public class VisibilityTest extends Thread {
 	}
 
 	public void run() {
-		while (isKeepRunning()) {
+		System.out.println("thread running.");
+		while (keepRunning) {
 		}
+		System.out.println("thread end.");
 	}
 
 	public static void main(String[] args) throws InterruptedException {
 		VisibilityTest test = new VisibilityTest();
 		test.start();
-		Thread.currentThread().sleep(1000);
+		Thread.sleep(1000);
 		test.setKeepRunning(false);
-		System.out.println("ok:" + test.isKeepRunning());
+		System.out.println("main thread signal keep running:" + test.isKeepRunning());
 
 	}
 
